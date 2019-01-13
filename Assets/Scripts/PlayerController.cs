@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
 	private bool jump = false;
 
 
+
 	
 	void Start()
 	{
@@ -22,28 +23,29 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update()
-	{
-		Vector3 move = Input.GetAxis ("Vertical") * transform.TransformDirection (Vector3.forward) * MoveSpeed;
-		transform.Rotate (new Vector3 (0, Input.GetAxis ("Horizontal") * RotationSpeed * Time.deltaTime, 0));
-		
-		if (!cc.isGrounded) {
-			gravidade += Physics.gravity * Time.deltaTime;
-		} 
-		else 
-		{
-			gravidade = Vector3.zero;
-			if(jump)
-			{
-				gravidade.y = 6f;
-				jump = false;
-			}
-		}
-		move += gravidade;
-		cc.Move (move* Time.deltaTime);
-		Anima ();
-	}
-	 
-	void Anima()
+    {
+        Vector3 move = Input.GetAxis("Vertical") * transform.TransformDirection(Vector3.forward) * MoveSpeed;
+        transform.Rotate(new Vector3(0, Input.GetAxis("Horizontal") * RotationSpeed * Time.deltaTime, 0));
+
+        if (!cc.isGrounded)
+        {
+            gravidade += Physics.gravity * Time.deltaTime;
+        }
+        else
+        {
+            gravidade = Vector3.zero;
+            if (jump)
+            {
+                gravidade.y = 6f;
+                jump = false;
+            }
+        }
+        move += gravidade;
+        cc.Move(move * Time.deltaTime);
+        Anima();
+    }
+
+    void Anima()
 	{
 		if (!Input.anyKey)
 		{
@@ -53,7 +55,7 @@ public class PlayerController : MonoBehaviour {
 		{
 			if(Input.GetKeyDown("space"))
 			{
-				anim.SetTrigger("Pula");
+                anim.SetTrigger("Pula");
 				jump = true;
 			}
 			else
@@ -62,4 +64,9 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 	}
+    public void Jump()
+    {
+        anim.SetTrigger("Pula");
+        jump = true;
+    }
 }
