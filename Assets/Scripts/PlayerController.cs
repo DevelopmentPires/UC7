@@ -68,5 +68,6 @@ public class PlayerController : MonoBehaviour {
     {
         anim.SetTrigger("Pula");
         jump = true;
+        
     }
 }

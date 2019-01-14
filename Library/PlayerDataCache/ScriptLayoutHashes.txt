@@ -122,6 +122,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 6db47c0f3365f761fd1a151b6ae9ab36 Assembly-CSharp.dll:.LeftJoystickTouchContoller
 c8b891ee09d952ae2e527567c00b9315 Assembly-CSharp.dll:.InstanciaPedras
 e0f114f2f14156401d16d6c811816bbb Assembly-CSharp.dll:.LeftJoystickPlayerController
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.JumpButton
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TocaSom
@@ -154,4 +155,3 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.rigi
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CarregaMenu
 692bcf171767de3c6085da9b344d47fd Assembly-CSharp.dll:.ConfigSom
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.JumpButton
