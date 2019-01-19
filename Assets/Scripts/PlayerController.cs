@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour {
 	void Update()
     {
         Vector3 move = Input.GetAxis("Vertical") * transform.TransformDirection(Vector3.forward) * MoveSpeed;
+
         transform.Rotate(new Vector3(0, Input.GetAxis("Horizontal") * RotationSpeed * Time.deltaTime, 0));
 
         if (!cc.isGrounded)

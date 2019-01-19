@@ -8,17 +8,17 @@ public class LeftJoystickPlayerController : MonoBehaviour
     public int rotationSpeed = 8; // rotation speed of the player character
     public Animator animator; // the animator controller of the player character
     private Vector3 leftJoystickInput; // holds the input of the Left Joystick
-    private Rigidbody rigidBody; // rigid body component of the player character
+    private CharacterController charControl; // rigid body component of the player character
 
     void Start()
     {
-        if (transform.GetComponent<Rigidbody>() == null)
+        if (transform.GetComponent<CharacterController>() == null)
         {
             Debug.LogError("A RigidBody component is required on this game object.");
         }
         else
         {
-            rigidBody = transform.GetComponent<Rigidbody>();
+            charControl = transform.GetComponent<CharacterController>();
         }
 
         if (leftJoystick == null)
@@ -77,7 +77,7 @@ public class LeftJoystickPlayerController : MonoBehaviour
             }
 
             // move the player
-            rigidBody.transform.Translate(leftJoystickInput * Time.fixedDeltaTime);
+            charControl.Move(leftJoystickInput * Time.fixedDeltaTime);
         }
     }
 }
